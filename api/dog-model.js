@@ -1,12 +1,8 @@
-const { nanoid } = require('nanoid')
-
-function getId() {
-  return nanoid().slice(0, 5)
-}
+const shortid = require('shortid');
 
 let dogs = [
-  { id: getId(), name: 'Captain', weight: 25 },
-  { id: getId(), name: 'Doggo', weight: 13 },
+  { id: shortid.generate(), name: 'Captain', weight: 25 },
+  { id: shortid.generate(), name: 'Doggo', weight: 13 },
 ]
 
 module.exports = {
@@ -23,7 +19,7 @@ module.exports = {
 
   async create({ name, weight }) {
     // INSERT INTO dogs (id, name, weight) VALUES ('xyz', 'Foo', 10);
-    const newDog = { id: getId(), name, weight }
+    const newDog = { id: shortid.generate(), name, weight }
     dogs.push(newDog)
     return newDog
   },

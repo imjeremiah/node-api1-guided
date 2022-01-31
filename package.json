@@ -4,6 +4,8 @@
   "description": "Guided project for **Node API 1** Module.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/imjeremiah/node-api1-guided/issues"
   },
-  "homepage": "https://github.com/imjeremiah/node-api1-guided#readme"
+  "homepage": "https://github.com/imjeremiah/node-api1-guided#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "nodemon": "^2.0.15"
+  }
 }
